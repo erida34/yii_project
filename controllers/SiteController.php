@@ -8,7 +8,7 @@ use app\models\FilterForm;
 use yii;
 use yii\data\ActiveDataProvider;
 use yii\helpers\ArrayHelper;
-class StoreController extends \yii\web\Controller
+class SiteController extends \yii\web\Controller
 {
     public function actionIndex()
     {
@@ -61,5 +61,12 @@ class StoreController extends \yii\web\Controller
         ]);
     }
 
+    public function actionError()
+    {
+        $exception = Yii::$app->errorHandler->exception;
+        if ($exception !== null) {
+            return $this->render('error', ['exception' => $exception]);
+        }
+    }
 
 }

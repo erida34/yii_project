@@ -6,7 +6,7 @@ $db = require __DIR__ . '/db.php';
 $config = [
     'id' => 'basic',
     'name' => 'Магазин Ботинки',
-    "homeUrl" => array('store/index'),
+    "homeUrl" => array('site/index'),
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'aliases' => [
@@ -18,7 +18,7 @@ $config = [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'osldA2C2rXzya0tyRMesiPNcjVFpLdVp',
             
-        ],
+        ],        
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
@@ -46,12 +46,6 @@ $config = [
         ],
         'db' => $db,
         
-        // 'urlManager' => [
-        //     'enablePrettyUrl' => true,
-        //     'showScriptName' => false,
-        //     'rules' => [
-        //     ],
-        // ],
         
     ],
     'params' => $params,

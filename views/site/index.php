@@ -110,7 +110,6 @@ function get_goods(item = new URLSearchParams(window.location.href).get('item'))
     document.querySelectorAll(".colors").forEach(function(elem){if(elem.checked) colors.push(elem.value)})
     document.querySelectorAll(".sizes").forEach(function(elem){if(elem.checked) sizes.push(elem.value)})
     var params = {
-        'r': 'store/index',
         'colors': colors,
         'sizes': sizes,
         'item': item
